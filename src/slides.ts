@@ -178,8 +178,16 @@ export const slides: Slide[] = [
     title: "社媒传播证明：用户愿意录屏、转发、晒战报",
     body: "这个项目最重要的验证不是页面是否完成，而是目标用户是否愿意把它当成情绪表达和社交素材继续传播。",
     media: [
-      { label: "录屏笔记截图", hint: "后续替换：10w+ 社媒笔记证明" },
-      { label: "玩家战报", hint: "后续替换：用户分享战报截图" },
+      {
+        label: "录屏笔记截图",
+        hint: "后续替换：10w+ 社媒笔记证明",
+        image: "/assets/imgs/爆锤音游单笔记10w曝光截图.png",
+      },
+      {
+        label: "玩家战报",
+        hint: "后续替换：用户分享战报截图",
+        image: "/assets/imgs/爆锤音游玩家分享游戏战报.png",
+      },
       { label: "二次传播", hint: "后续替换：评论 / 转发反馈截图" },
     ],
     stats: [
@@ -226,8 +234,16 @@ export const slides: Slide[] = [
       "Demo 先于排期完成，让团队可以围绕真实体验讨论商业化与开发投入。",
     ],
     media: [
-      { label: "播放器录屏", hint: "后续替换：角色卡点播放器动效截图" },
-      { label: "用户返图", hint: "后续替换：返图 / 评论截图" },
+      {
+        label: "播放器录屏",
+        hint: "后续替换：角色卡点播放器动效截图",
+        image: "/assets/imgs/卡点播放器播放量.png",
+      },
+      {
+        label: "用户返图",
+        hint: "后续替换：返图 / 评论截图",
+        image: "/assets/imgs/卡点播放器用户返图.png",
+      },
     ],
     icon: Code2,
   },
@@ -347,8 +363,16 @@ export const slides: Slide[] = [
       { label: "少数派 · AI 音乐产品洞察", href: "https://sspai.com/post/92435" },
     ],
     media: [
-      { label: "分享现场", hint: "后续替换：TME 内部分享 / 黑客松图片" },
-      { label: "文章收录", hint: "后续替换：少数派 / WaytoAGI 截图" },
+      {
+        label: "分享现场",
+        hint: "后续替换：TME 内部分享 / 黑客松图片",
+        image: "/assets/imgs/设计周分享嘉宾.png",
+      },
+      {
+        label: "文章收录",
+        hint: "后续替换：少数派 / WaytoAGI 截图",
+        image: "/assets/imgs/TME“AI主理人”，AI实践案例分享文章获Top2.png",
+      },
     ],
     icon: Trophy,
   },
