@@ -188,7 +188,11 @@ export const slides: Slide[] = [
         hint: "后续替换：用户分享战报截图",
         image: "/assets/imgs/爆锤音游玩家分享游戏战报.png",
       },
-      { label: "二次传播", hint: "后续替换：评论 / 转发反馈截图" },
+      {
+        label: "晒战报",
+        hint: "玩家晒出游戏战报，形成二次传播",
+        image: "/assets/imgs/爆锤音游晒战报.png",
+      },
     ],
     stats: [
       { value: "10w+", label: "单篇录屏笔记" },
