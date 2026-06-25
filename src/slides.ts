@@ -25,7 +25,8 @@ export type SlideKind =
   | "reflection"
   | "showcase"
   | "influence"
-  | "closing";
+  | "closing"
+  | "finale";
 
 export type Stat = {
   value: string;
@@ -42,6 +43,9 @@ export type MediaItem = {
   label: string;
   hint?: string;
   image?: string;
+  imageFit?: "cover" | "contain";
+  placeholder?: "npm-package";
+  link?: LinkItem;
 };
 
 export type InfluenceItem = {
@@ -80,11 +84,13 @@ export type Slide = {
   kind: SlideKind;
   eyebrow: string;
   title: string;
+  variant?: "d2c";
   kicker?: string;
   body?: string;
   tags?: string[];
   stats?: Stat[];
   links?: LinkItem[];
+  appStoreHint?: string;
   bullets?: string[];
   influenceItems?: InfluenceItem[];
   pillars?: Pillar[];
@@ -94,6 +100,8 @@ export type Slide = {
   quote?: string;
   icon?: LucideIcon;
   image?: string;
+  imageLayout?: "web" | "mobile";
+  imagePlaceholder?: string;
   avatar?: string;
 };
 
@@ -155,7 +163,7 @@ export const slides: Slide[] = [
   {
     kind: "influence",
     eyebrow: "INFLUENCE · 01",
-    title: "影响力：AI课程分享，把技能变成可复用经验",
+    title: "影响力：AI课程，分享可复用经验",
     influenceItems: [
       {
         badge: "邀请嘉宾",
@@ -271,7 +279,7 @@ export const slides: Slide[] = [
   {
     kind: "proof",
     eyebrow: "PROJECT 01 · PROOF",
-    title: "社媒验证价值：用户录屏分享、晒战报",
+    title: "社媒数据验证：用户录屏分享、晒战报",
     media: [
       {
         label: "单篇热度 10w+",
@@ -291,13 +299,12 @@ export const slides: Slide[] = [
     kind: "reflection",
     eyebrow: "PROJECT 01 · REFLECTION",
     title: "AI提升游戏制作效率，故事设定与情绪价值仍是核心竞争力",
-    quote: "通过 Codex，可以非常方便生成游戏帧动画并制作成真实可玩游戏；最大壁垒在于美术与创意设计，需要让目标玩家对游戏设定买单。",
+    avatar: "/assets/profile/avatar.png",
     bullets: [
-      "可玩 Demo 的门槛下降，设计师可以更早进入“真实反馈”阶段。",
-      "AI 不是替代创意判断，而是放大创意验证速度。",
-      "小游戏的核心不是技术完成度，而是角色、情绪、反馈和分享动机是否成立。",
+      "艺粉游戏的设计理念是营造[[应援氛围]]。",
+      "[[Build in public]]，利用粉丝反馈来优化设计决策。",
+      "学会[[控制和管理]]Agent，释放它的潜能。",
     ],
-    icon: WandSparkles,
   },
   {
     kind: "project",
@@ -310,14 +317,14 @@ export const slides: Slide[] = [
       { value: "音画同步", label: "场景和角色随音乐律动\n增强陪伴和沉浸感" },
       { value: "个性化", label: "角色数量随听歌时长增加\n阵列可定制成艺人昵称吸引粉丝" },
     ],
-    links: [{ label: "体验项目", href: "https://njzneverdie.wystudio.zone/" }],
+    links: [{ label: "在线体验", href: "https://njzneverdie.wystudio.zone/" }],
     image: "/assets/imgs/角色卡点播放器项目截图.png",
     icon: Sparkles,
   },
   {
     kind: "proof",
     eyebrow: "PROJECT 02 · PROOF",
-    title: "社媒传播证明：用户大量好评并返图",
+    title: "社媒数据验证：用户大量好评并返图",
     media: [
       {
         label: "社媒近10w热度",
@@ -332,7 +339,7 @@ export const slides: Slide[] = [
   {
     kind: "reflection",
     eyebrow: "PROJECT 02 · DESIGN AS CODE",
-    title: "AI让游戏制作变快，但买单理由仍来自故事设定和情绪价值",
+    title: "设计即代码：\n从“反复对齐”到“交付代码”",
     avatar: "/assets/imgs/profile.jpg",
     bullets: [
       "利用Agent制作出[[真实可互动效果]]，降低设计&开发沟通损耗",
@@ -342,100 +349,143 @@ export const slides: Slide[] = [
   {
     kind: "project",
     eyebrow: "PROJECT 03",
-    title: "Vemus 未音 · Web 端",
-    kicker: "面向 AI 音乐创作的 Web 产品体验设计。",
-    body: "2025.09 - 2026.02，负责交互设计和 UI 设计。业务较少资源投入市场运营、声量不高，但半年无更新和运营，每天仍然有 800 左右收入。",
+    title: "音乐Agent工具设计\nVemus未音 · Web端",
+    kicker: "面向专业音乐创作的Agent平台",
     tags: ["AI Music", "Web Product", "Interaction Design", "UI Design"],
     stats: [
-      { value: "800", label: "半年无运营日收入左右" },
       { value: "双职责", label: "交互 + UI 设计" },
-      { value: "已落地", label: "线上可访问" },
+      { value: "画布式", label: "适合资产管理和灵感发散" },
+      { value: "800+", label: "无运营情况下每日收入" },
     ],
-    links: [{ label: "查看产品", href: "https://y.qq.com/vemus#/" }],
+    links: [{ label: "在线体验", href: "https://y.qq.com/vemus#/" }],
+    image: "/assets/imgs/vemus web端截图.png",
+    imageLayout: "web",
     icon: Brain,
   },
   {
     kind: "project",
     eyebrow: "PROJECT 04",
-    title: "Vemus 未音 · 移动端",
-    kicker: "两周内完成 APP 交互方案，支撑产品顺利上线。",
-    body: "2025.09 至今，负责交互设计。去年项目启动后，需要在两周内完成整个 APP 交互方案：从竞品、用户分析到框架和细节输出，保证产品顺利上线。",
+    title: "音乐Agent工具设计\nVemus未音 · 移动端",
+    kicker: "3周内完成 APP 交互方案，支撑产品顺利上线。",
     tags: ["Mobile App", "AI Music", "Fast Delivery", "Product Launch"],
     stats: [
-      { value: "3w", label: "DAU" },
-      { value: "3.39w", label: "收入" },
-      { value: "32%", label: "次留" },
+      { value: "对话式 + 表单式", label: "双路径作歌" },
+      { value: "改编 & 换音", label: "歌曲再创作" },
+      { value: "3w+", label: "DAU 和日收入" },
     ],
     bullets: [
-      "对专业创作者，需要继续提升做歌 Agent 底层能力。",
       "对泛音乐爱好者，需要探索更有趣的社交玩法，带动产品破圈。",
     ],
+    appStoreHint: "前往应用商店搜索 Vemus未音",
+    image: "/assets/imgs/vemus移动端截图.png",
+    imageLayout: "mobile",
     icon: LineChart,
   },
   {
     kind: "reflection",
-    eyebrow: "PROJECT 05",
-    title: "长音频视频化：在蛮荒时代就开始探索 AI 工作流",
-    body: "2023 年，负责视频化内容生产工作流搭建，基于 Stable Diffusion，落地于长音频儿童、古诗品类。",
-    quote: "AI 图片生成的 SD 年代，还需要搭配 LoRA 调试各种参数。当时的工作流早已被淘汰，但自驱力和解决问题的能力是一脉相承的。",
+    eyebrow: "VEMUS REFLECTION",
+    title: "把复杂AI作歌能力\n转化为易上手的创作体验",
+    avatar: "/assets/profile/avatar.png",
     bullets: [
-      "从早期 SD / LoRA 参数调试开始，理解生成式工具的能力边界。",
-      "关注的不是某个工具本身，而是如何把它组织成稳定内容生产流程。",
-      "这条经验延续到后来的 AI 视频、AI 音乐和 Vibe Coding 项目中。",
+      "画布式交互与 Chatbot 体验，优化空间受底层能力制约。",
+      "通过灵感引导、多路径入口和二创延展，构建低门槛、可持续的 AI 作歌链路。",
+      "交互和 UI 双职责，令我的 UI 设计能力有了很大提升。",
+    ],
+  },
+  {
+    kind: "showcase",
+    variant: "d2c",
+    eyebrow: "DESIGN TO CODE",
+    title: "Design to Code探索",
+    body: "基于 Vemus 设计系统，自发进行 D2C 流程验证，理解设计资产如何结构化转译为组件代码。",
+    media: [
+      {
+        label: "Step 01｜梳理设计系统",
+        hint: "覆盖颜色、文字、组件规范等基础资产，为代码生成提供结构化输入",
+        image: "/assets/imgs/vemus设计系统.jpg",
+        imageFit: "contain",
+      },
+      {
+        label: "Step 02｜用 Codex 生成组件代码",
+        hint: "逐一尝试将设计组件转译为前端组件，后续仍需更多真实样例持续校准 AI 输出",
+        image: "/assets/imgs/codex生成组件代码.jpg",
+        imageFit: "contain",
+      },
+      {
+        label: "Step 03｜组件库打包设想",
+        hint: "未来可打包为 npm package，为前端项目复用做准备",
+        placeholder: "npm-package",
+      },
     ],
     icon: Compass,
   },
   {
     kind: "showcase",
     eyebrow: "AI VIDEO CREATION",
-    title: "AI 视频创作：从品牌运营到产品表达",
-    body: "围绕 Vemus、Q 音和品牌合作，持续把新的视频生成工具转化为可传播内容。",
+    title: "AI 视频创作：辅助业务进行品牌运营",
     media: [
-      { label: "Vemus 品牌宣传短片", hint: "Sora · 后续替换作品截图" },
-      { label: "播放器高雅企鹅陪伴小人", hint: "即梦动作模仿 · 后续替换作品截图" },
-      { label: "哪吒皮肤上线 Q 音", hint: "可灵 / Pika / Vidu · 后续替换作品截图" },
+      {
+        label: "Vemus品牌宣传",
+        image: "/assets/imgs/vemus品牌宣传.jpg",
+        link: {
+          label: "Vemus品牌宣传",
+          href: "https://www.xiaohongshu.com/discovery/item/690c980c00000000040020bc?source=webshare&xhsshare=pc_web&xsec_token=AB9OD9wm4CPWjsw8S8tVaRgpnLc3trcOmL1lZDvVLhWGw=&xsec_source=pc_share",
+        },
+      },
+      {
+        label: "播放器企鹅角色上新",
+        image: "/assets/imgs/播放器高雅企鹅.png",
+        link: {
+          label: "播放器企鹅角色上新",
+          href: "https://www.xiaohongshu.com/discovery/item/69182fa60000000004021467?source=webshare&xhsshare=pc_web&xsec_token=ABKTOz3W0nOJlq9ByinPbIBPcTbfhqoeziwbCblx-A48A=&xsec_source=pc_share",
+        },
+      },
+      {
+        label: "哪吒皮肤上新",
+        image: "/assets/imgs/哪吒来q音上班.png",
+        link: {
+          label: "哪吒皮肤上新",
+          href: "https://www.xiaohongshu.com/discovery/item/67ae0e36000000001800fb81?source=webshare&xhsshare=pc_web&xsec_token=ABgEqgkQtqg1aKUxj0kPSBVesInOcH-xR4o8TqSNgHjVE=&xsec_source=pc_share",
+        },
+      },
     ],
-    links: [
-      {
-        label: "Vemus 品牌宣传短片",
-        href: "https://www.xiaohongshu.com/discovery/item/690c980c00000000040020bc?source=webshare&xhsshare=pc_web&xsec_token=AB9OD9wm4CPWjsw8S8tVaRgpnLc3trcOmL1lZDvVLhWGw=&xsec_source=pc_share",
-      },
-      {
-        label: "企鹅陪伴小人",
-        href: "https://www.xiaohongshu.com/discovery/item/69182fa60000000004021467?source=webshare&xhsshare=pc_web&xsec_token=ABKTOz3W0nOJlq9ByinPbIBPcTbfhqoeziwbCblx-A48A=&xsec_source=pc_share",
-      },
-      {
-        label: "哪吒皮肤上线",
-        href: "https://www.xiaohongshu.com/discovery/item/67ae0e36000000001800fb81?source=webshare&xhsshare=pc_web&xsec_token=ABgEqgkQtqg1aKUxj0kPSBVesInOcH-xR4o8TqSNgHjVE=&xsec_source=pc_share",
-      },
-    ],
-    tags: ["Sora", "即梦", "可灵", "Pika", "Vidu"],
   },
   {
     kind: "showcase",
     eyebrow: "BRAND CO-CREATION",
-    title: "其他品牌共创：把 AI 内容能力带到更广的表达场景",
-    body: "除自有业务外，也参与 Intel、蚂蚁科技、混元等品牌共创，把 AI 视频创作能力应用到不同品牌语境中。",
+    title: "其他品牌共创",
     media: [
-      { label: "Intel 合作", hint: "后续替换：合作内容截图" },
-      { label: "蚂蚁科技", hint: "后续替换：合作内容截图" },
-      { label: "混元", hint: "后续替换：合作内容截图" },
-    ],
-    links: [
       {
         label: "Intel 合作",
-        href: "https://www.xiaohongshu.com/discovery/item/65d876b4000000000b018701?source=webshare&xhsshare=pc_web&xsec_token=ABczOgCOj-R9R3D2bECJJmjhAqO11EIrvNXYCamOI75YQ=&xsec_source=pc_share",
+        image: "/assets/imgs/intel合作.png",
+        link: {
+          label: "Intel 合作",
+          href: "https://www.xiaohongshu.com/discovery/item/65d876b4000000000b018701?source=webshare&xhsshare=pc_web&xsec_token=ABczOgCOj-R9R3D2bECJJmjhAqO11EIrvNXYCamOI75YQ=&xsec_source=pc_share",
+        },
       },
       {
-        label: "蚂蚁科技",
-        href: "https://www.xiaohongshu.com/discovery/item/67a4c23b0000000018004353?source=webshare&xhsshare=pc_web&xsec_token=ABoL9L2QBxuE44D_mIYaZBxSot34FAmKQClI4c3A5qRNw=&xsec_source=pc_share",
+        label: "支付宝合作",
+        image: "/assets/imgs/支付宝合作.png",
+        link: {
+          label: "支付宝合作",
+          href: "https://www.xiaohongshu.com/discovery/item/67a4c23b0000000018004353?source=webshare&xhsshare=pc_web&xsec_token=ABoL9L2QBxuE44D_mIYaZBxSot34FAmKQClI4c3A5qRNw=&xsec_source=pc_share",
+        },
       },
       {
-        label: "混元",
-        href: "https://www.xiaohongshu.com/discovery/item/6752f95d000000000202ddce?source=webshare&xhsshare=pc_web&xsec_token=ABTiy6mrovEK8lk3urEs4xtYuvWHJgrhEVFI9fRYge1cs=&xsec_source=pc_share",
+        label: "混元合作",
+        image: "/assets/imgs/混元合作.png",
+        link: {
+          label: "混元合作",
+          href: "https://www.xiaohongshu.com/discovery/item/6752f95d000000000202ddce?source=webshare&xhsshare=pc_web&xsec_token=ABTiy6mrovEK8lk3urEs4xtYuvWHJgrhEVFI9fRYge1cs=&xsec_source=pc_share",
+        },
       },
     ],
     icon: Users,
+  },
+  {
+    kind: "finale",
+    eyebrow: "FINAL",
+    title: "主要在行动\n就是在向前走",
   },
 ];
 
