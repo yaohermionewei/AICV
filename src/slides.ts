@@ -169,16 +169,16 @@ export const slides: Slide[] = [
         badge: "邀请嘉宾",
         title: "TME 2026 产品设计黑客松",
         desc: "受邀分享 Vibe Coding 经验",
-        images: ["/assets/imgs/设计周分享嘉宾.png"],
+        images: ["/assets/optimized/设计周分享嘉宾.webp"],
       },
       {
         badge: "内部分享课 ×4",
         title: "TME 内部分享课 4 次：",
         desc: "两次 AI 视频、一次 AI 音乐、一次 Vibe Coding",
         images: [
-          "/assets/imgs/tme分享课-ai视频2.png",
-          "/assets/imgs/tme分享课-ai音乐.png",
-          "/assets/imgs/tme分享课-vibecoding.png",
+          "/assets/optimized/tme分享课-ai视频2.webp",
+          "/assets/optimized/tme分享课-ai音乐.webp",
+          "/assets/optimized/tme分享课-vibecoding.webp",
         ],
       },
     ],
@@ -193,20 +193,20 @@ export const slides: Slide[] = [
         badge: "实践案例 Top 2",
         title: "TME “AI 主理人”",
         desc: "AI 实践案例分享文章获 Top 2",
-        images: ["/assets/imgs/TME“AI主理人”，AI实践案例分享文章获Top2.png"],
+        images: ["/assets/optimized/tme-ai主理人-ai实践案例分享文章获top2.webp"],
       },
       {
         badge: "少数派首页 · WaytoAGI",
         title: "角色卡点播放器文章",
         desc: "登上少数派 APP 首页",
-        images: ["/assets/imgs/卡点播放器登上少数派首页.png"],
+        images: ["/assets/optimized/卡点播放器登上少数派首页.webp"],
         link: { label: "少数派 · 卡点播放器", href: "https://sspai.com/post/106050" },
       },
       {
         badge: "设计代表",
         title: "TME “寻找 AI 手艺人”",
         desc: "作为设计代表分享 AI经验技巧",
-        images: ["/assets/imgs/ai手艺人.png"],
+        images: ["/assets/optimized/ai手艺人.webp"],
       },
     ],
     icon: Trophy,
@@ -273,7 +273,7 @@ export const slides: Slide[] = [
       { value: "10w+", label: "社媒热度高，玩家自发传播晒战报" },
     ],
     links: [{ label: "在线体验", href: "https://bnzhitpig.wystudio.zone/" }],
-    image: "/assets/imgs/爆锤音游游戏截图.png",
+    image: "/assets/optimized/爆锤音游游戏截图.webp",
     icon: Music2,
   },
   {
@@ -283,15 +283,15 @@ export const slides: Slide[] = [
     media: [
       {
         label: "单篇热度 10w+",
-        image: "/assets/imgs/爆锤音游单笔记10w曝光截图.png",
+        image: "/assets/optimized/爆锤音游单笔记10w曝光截图.webp",
       },
       {
         label: "玩家高度评价",
-        image: "/assets/imgs/爆锤音游玩家分享游戏战报.png",
+        image: "/assets/optimized/爆锤音游玩家分享游戏战报.webp",
       },
       {
         label: "晒战报，形成二次传播",
-        image: "/assets/imgs/爆锤音游晒战报.png",
+        image: "/assets/optimized/爆锤音游晒战报.webp",
       },
     ],
   },
@@ -299,7 +299,7 @@ export const slides: Slide[] = [
     kind: "reflection",
     eyebrow: "PROJECT 01 · REFLECTION",
     title: "AI提升游戏制作效率，故事设定与情绪价值仍是核心竞争力",
-    avatar: "/assets/profile/avatar.png",
+    avatar: "/assets/optimized/avatar.webp",
     bullets: [
       "艺粉游戏的设计理念是营造[[应援氛围]]。",
       "[[Build in public]]，利用粉丝反馈来优化设计决策。",
@@ -318,7 +318,7 @@ export const slides: Slide[] = [
       { value: "个性化", label: "角色数量随听歌时长增加\n阵列可定制成艺人昵称吸引粉丝" },
     ],
     links: [{ label: "在线体验", href: "https://njzneverdie.wystudio.zone/" }],
-    image: "/assets/imgs/角色卡点播放器项目截图.png",
+    image: "/assets/optimized/角色卡点播放器项目截图.webp",
     icon: Sparkles,
   },
   {
@@ -328,11 +328,11 @@ export const slides: Slide[] = [
     media: [
       {
         label: "社媒近10w热度",
-        image: "/assets/imgs/卡点播放器播放量.png",
+        image: "/assets/optimized/卡点播放器播放量.webp",
       },
       {
         label: "用户好评&返图",
-        image: "/assets/imgs/卡点播放器用户返图.png",
+        image: "/assets/optimized/卡点播放器用户返图.webp",
       },
     ],
   },
@@ -340,7 +340,7 @@ export const slides: Slide[] = [
     kind: "reflection",
     eyebrow: "PROJECT 02 · DESIGN AS CODE",
     title: "设计即代码：\n从“反复对齐”到“交付代码”",
-    avatar: "/assets/imgs/profile.jpg",
+    avatar: "/assets/optimized/profile.webp",
     bullets: [
       "利用Agent制作出[[真实可互动效果]]，降低设计&开发沟通损耗",
       "播放器的价值不只在视觉，更在[[情感陪伴]]",
@@ -358,7 +358,7 @@ export const slides: Slide[] = [
       { value: "800+", label: "无运营情况下每日收入" },
     ],
     links: [{ label: "在线体验", href: "https://y.qq.com/vemus#/" }],
-    image: "/assets/imgs/vemus web端截图.png",
+    image: "/assets/optimized/vemus-web端截图.webp",
     imageLayout: "web",
     icon: Brain,
   },
@@ -377,7 +377,7 @@ export const slides: Slide[] = [
       "对泛音乐爱好者，需要探索更有趣的社交玩法，带动产品破圈。",
     ],
     appStoreHint: "前往应用商店搜索 Vemus未音",
-    image: "/assets/imgs/vemus移动端截图.png",
+    image: "/assets/optimized/vemus移动端截图.webp",
     imageLayout: "mobile",
     icon: LineChart,
   },
@@ -385,7 +385,7 @@ export const slides: Slide[] = [
     kind: "reflection",
     eyebrow: "VEMUS REFLECTION",
     title: "把复杂AI作歌能力\n转化为易上手的创作体验",
-    avatar: "/assets/profile/avatar.png",
+    avatar: "/assets/optimized/avatar.webp",
     bullets: [
       "画布式交互与 Chatbot 体验，优化空间受底层能力制约。",
       "通过灵感引导、多路径入口和二创延展，构建低门槛、可持续的 AI 作歌链路。",
@@ -402,13 +402,13 @@ export const slides: Slide[] = [
       {
         label: "Step 01｜梳理设计系统",
         hint: "覆盖颜色、文字、组件规范等基础资产，为代码生成提供结构化输入",
-        image: "/assets/imgs/vemus设计系统.jpg",
+        image: "/assets/optimized/vemus设计系统.webp",
         imageFit: "contain",
       },
       {
         label: "Step 02｜用 Codex 生成组件代码",
         hint: "逐一尝试将设计组件转译为前端组件，后续仍需更多真实样例持续校准 AI 输出",
-        image: "/assets/imgs/codex生成组件代码.jpg",
+        image: "/assets/optimized/codex生成组件代码.webp",
         imageFit: "contain",
       },
       {
@@ -426,7 +426,7 @@ export const slides: Slide[] = [
     media: [
       {
         label: "Vemus品牌宣传",
-        image: "/assets/imgs/vemus品牌宣传.jpg",
+        image: "/assets/optimized/vemus品牌宣传.webp",
         link: {
           label: "Vemus品牌宣传",
           href: "https://www.xiaohongshu.com/discovery/item/690c980c00000000040020bc?source=webshare&xhsshare=pc_web&xsec_token=AB9OD9wm4CPWjsw8S8tVaRgpnLc3trcOmL1lZDvVLhWGw=&xsec_source=pc_share",
@@ -434,7 +434,7 @@ export const slides: Slide[] = [
       },
       {
         label: "播放器企鹅角色上新",
-        image: "/assets/imgs/播放器高雅企鹅.png",
+        image: "/assets/optimized/播放器高雅企鹅.webp",
         link: {
           label: "播放器企鹅角色上新",
           href: "https://www.xiaohongshu.com/discovery/item/69182fa60000000004021467?source=webshare&xhsshare=pc_web&xsec_token=ABKTOz3W0nOJlq9ByinPbIBPcTbfhqoeziwbCblx-A48A=&xsec_source=pc_share",
@@ -442,7 +442,7 @@ export const slides: Slide[] = [
       },
       {
         label: "哪吒皮肤上新",
-        image: "/assets/imgs/哪吒来q音上班.png",
+        image: "/assets/optimized/哪吒来q音上班.webp",
         link: {
           label: "哪吒皮肤上新",
           href: "https://www.xiaohongshu.com/discovery/item/67ae0e36000000001800fb81?source=webshare&xhsshare=pc_web&xsec_token=ABgEqgkQtqg1aKUxj0kPSBVesInOcH-xR4o8TqSNgHjVE=&xsec_source=pc_share",
@@ -457,7 +457,7 @@ export const slides: Slide[] = [
     media: [
       {
         label: "Intel 合作",
-        image: "/assets/imgs/intel合作.png",
+        image: "/assets/optimized/intel合作.webp",
         link: {
           label: "Intel 合作",
           href: "https://www.xiaohongshu.com/discovery/item/65d876b4000000000b018701?source=webshare&xhsshare=pc_web&xsec_token=ABczOgCOj-R9R3D2bECJJmjhAqO11EIrvNXYCamOI75YQ=&xsec_source=pc_share",
@@ -465,7 +465,7 @@ export const slides: Slide[] = [
       },
       {
         label: "支付宝合作",
-        image: "/assets/imgs/支付宝合作.png",
+        image: "/assets/optimized/支付宝合作.webp",
         link: {
           label: "支付宝合作",
           href: "https://www.xiaohongshu.com/discovery/item/67a4c23b0000000018004353?source=webshare&xhsshare=pc_web&xsec_token=ABoL9L2QBxuE44D_mIYaZBxSot34FAmKQClI4c3A5qRNw=&xsec_source=pc_share",
@@ -473,7 +473,7 @@ export const slides: Slide[] = [
       },
       {
         label: "混元合作",
-        image: "/assets/imgs/混元合作.png",
+        image: "/assets/optimized/混元合作.webp",
         link: {
           label: "混元合作",
           href: "https://www.xiaohongshu.com/discovery/item/6752f95d000000000202ddce?source=webshare&xhsshare=pc_web&xsec_token=ABTiy6mrovEK8lk3urEs4xtYuvWHJgrhEVFI9fRYge1cs=&xsec_source=pc_share",

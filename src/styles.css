@@ -249,7 +249,6 @@ h1 {
 }
 
 .hero-title-alias {
-  font-family: "Albert Sans", sans-serif;
   font-size: 0.66em;
   font-weight: 600;
   letter-spacing: 0.005em;
@@ -851,7 +850,6 @@ h1 {
   margin-left: auto;
   min-height: clamp(23px, 1.5vw, 28px);
   color: rgba(246, 247, 242, 0.1);
-  font-family: "Albert Sans", sans-serif;
   font-size: clamp(17px, 1.55vw, 27px);
   font-weight: 700;
   font-variant-numeric: tabular-nums;

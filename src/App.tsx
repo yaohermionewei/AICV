@@ -10,8 +10,31 @@ import {
 } from "lucide-react";
 import { iconForExternalLink, slides, type LinkItem, type MediaItem, type Slide } from "./slides";
 
-const avatarSrc = "/assets/profile/avatar.png";
+const avatarSrc = "/assets/optimized/avatar.webp";
 const ExternalLinkIcon = iconForExternalLink;
+
+function OptimizedImage({
+  src,
+  alt,
+  eager = false,
+  onError,
+}: {
+  src: string;
+  alt: string;
+  eager?: boolean;
+  onError?: () => void;
+}) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
+      fetchPriority={eager ? "high" : "auto"}
+      onError={onError}
+    />
+  );
+}
 
 function useSlideNavigation(total: number) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -265,7 +288,7 @@ function HeroSlide({ slide }: { slide: Slide }) {
       </div>
       <div className="portrait-panel">
         <div className="portrait-frame">
-          <img src={avatarSrc} alt="魏瑶 Hermionewei 头像" />
+          <OptimizedImage src={avatarSrc} alt="魏瑶 Hermionewei 头像" eager />
         </div>
       </div>
       <StatsGrid stats={slide.stats} />
@@ -404,7 +427,7 @@ function ProjectSlide({ slide }: { slide: Slide }) {
         </div>
         <div className={projectShotClassName}>
           {slide.image ? (
-            <img src={slide.image} alt={`${slide.title.replace("\n", " ")} 项目截图`} />
+            <OptimizedImage src={slide.image} alt={`${slide.title.replace("\n", " ")} 项目截图`} />
           ) : (
             <div className="project-shot-placeholder">
               <ImageIcon size={34} aria-hidden="true" />
@@ -564,7 +587,7 @@ function InfluenceShot({ src, alt, link }: { src: string; alt: string; link?: Li
         <ImageIcon size={30} aria-hidden="true" />
       ) : (
         <>
-          <img src={src} alt={alt} onError={() => setFailed(true)} />
+          <OptimizedImage src={src} alt={alt} onError={() => setFailed(true)} />
           {link ? (
             <a
               className="influence-read-link"
@@ -712,7 +735,7 @@ function MediaGrid({
             {item.placeholder === "npm-package" ? (
               <NpmPackagePlaceholder />
             ) : item.image ? (
-              <img src={item.image} alt={item.label} />
+              <OptimizedImage src={item.image} alt={item.label} />
             ) : (
               <ImageIcon size={34} aria-hidden="true" />
             )}

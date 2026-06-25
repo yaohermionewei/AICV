@@ -1,0 +1,217 @@
+{
+  "generatedAt": "2026-06-25T22:53:42.727Z",
+  "outputBaseUrl": "/assets/optimized",
+  "totalBefore": 35491926,
+  "totalAfter": 1134154,
+  "savingsRatio": 0.9680447322019098,
+  "images": [
+    {
+      "from": "/assets/imgs/爆锤音游单笔记10w曝光截图.png",
+      "to": "/assets/optimized/爆锤音游单笔记10w曝光截图.webp",
+      "sourceBytes": 709260,
+      "outputBytes": 22498,
+      "sourceWidth": 670,
+      "outputWidth": 670
+    },
+    {
+      "from": "/assets/imgs/爆锤音游晒战报.png",
+      "to": "/assets/optimized/爆锤音游晒战报.webp",
+      "sourceBytes": 1391436,
+      "outputBytes": 56532,
+      "sourceWidth": 1940,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/爆锤音游玩家分享游戏战报.png",
+      "to": "/assets/optimized/爆锤音游玩家分享游戏战报.webp",
+      "sourceBytes": 381181,
+      "outputBytes": 25078,
+      "sourceWidth": 1870,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/爆锤音游游戏截图.png",
+      "to": "/assets/optimized/爆锤音游游戏截图.webp",
+      "sourceBytes": 1648013,
+      "outputBytes": 87206,
+      "sourceWidth": 800,
+      "outputWidth": 800
+    },
+    {
+      "from": "/assets/imgs/播放器高雅企鹅.png",
+      "to": "/assets/optimized/播放器高雅企鹅.webp",
+      "sourceBytes": 523474,
+      "outputBytes": 25412,
+      "sourceWidth": 600,
+      "outputWidth": 600
+    },
+    {
+      "from": "/assets/imgs/混元合作.png",
+      "to": "/assets/optimized/混元合作.webp",
+      "sourceBytes": 6040449,
+      "outputBytes": 67930,
+      "sourceWidth": 2400,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/角色卡点播放器项目截图.png",
+      "to": "/assets/optimized/角色卡点播放器项目截图.webp",
+      "sourceBytes": 425417,
+      "outputBytes": 28130,
+      "sourceWidth": 800,
+      "outputWidth": 800
+    },
+    {
+      "from": "/assets/imgs/卡点播放器播放量.png",
+      "to": "/assets/optimized/卡点播放器播放量.webp",
+      "sourceBytes": 775314,
+      "outputBytes": 43152,
+      "sourceWidth": 1280,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/卡点播放器登上少数派首页.png",
+      "to": "/assets/optimized/卡点播放器登上少数派首页.webp",
+      "sourceBytes": 1549812,
+      "outputBytes": 46106,
+      "sourceWidth": 2638,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/卡点播放器用户返图.png",
+      "to": "/assets/optimized/卡点播放器用户返图.webp",
+      "sourceBytes": 1284705,
+      "outputBytes": 44634,
+      "sourceWidth": 2020,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/哪吒来q音上班.png",
+      "to": "/assets/optimized/哪吒来q音上班.webp",
+      "sourceBytes": 682560,
+      "outputBytes": 32270,
+      "sourceWidth": 600,
+      "outputWidth": 600
+    },
+    {
+      "from": "/assets/imgs/设计周分享嘉宾.png",
+      "to": "/assets/optimized/设计周分享嘉宾.webp",
+      "sourceBytes": 946991,
+      "outputBytes": 50312,
+      "sourceWidth": 1938,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/支付宝合作.png",
+      "to": "/assets/optimized/支付宝合作.webp",
+      "sourceBytes": 4507413,
+      "outputBytes": 97936,
+      "sourceWidth": 1800,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/ai手艺人.png",
+      "to": "/assets/optimized/ai手艺人.webp",
+      "sourceBytes": 308724,
+      "outputBytes": 56586,
+      "sourceWidth": 1732,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/codex生成组件代码.jpg",
+      "to": "/assets/optimized/codex生成组件代码.webp",
+      "sourceBytes": 226288,
+      "outputBytes": 10728,
+      "sourceWidth": 1576,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/intel合作.png",
+      "to": "/assets/optimized/intel合作.webp",
+      "sourceBytes": 5880104,
+      "outputBytes": 89648,
+      "sourceWidth": 2400,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/profile.jpg",
+      "to": "/assets/optimized/profile.webp",
+      "sourceBytes": 40335,
+      "outputBytes": 5734,
+      "sourceWidth": 400,
+      "outputWidth": 400
+    },
+    {
+      "from": "/assets/imgs/TME“AI主理人”，AI实践案例分享文章获Top2.png",
+      "to": "/assets/optimized/tme-ai主理人-ai实践案例分享文章获top2.webp",
+      "sourceBytes": 164861,
+      "outputBytes": 33152,
+      "sourceWidth": 1710,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/tme分享课-ai视频2.png",
+      "to": "/assets/optimized/tme分享课-ai视频2.webp",
+      "sourceBytes": 1652914,
+      "outputBytes": 41766,
+      "sourceWidth": 1704,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/tme分享课-ai音乐.png",
+      "to": "/assets/optimized/tme分享课-ai音乐.webp",
+      "sourceBytes": 1589802,
+      "outputBytes": 20878,
+      "sourceWidth": 3064,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/tme分享课-vibecoding.png",
+      "to": "/assets/optimized/tme分享课-vibecoding.webp",
+      "sourceBytes": 2670360,
+      "outputBytes": 64680,
+      "sourceWidth": 2140,
+      "outputWidth": 1180
+    },
+    {
+      "from": "/assets/imgs/vemus web端截图.png",
+      "to": "/assets/optimized/vemus-web端截图.webp",
+      "sourceBytes": 495141,
+      "outputBytes": 65272,
+      "sourceWidth": 2880,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/vemus品牌宣传.jpg",
+      "to": "/assets/optimized/vemus品牌宣传.webp",
+      "sourceBytes": 547383,
+      "outputBytes": 23760,
+      "sourceWidth": 522,
+      "outputWidth": 522
+    },
+    {
+      "from": "/assets/imgs/vemus设计系统.jpg",
+      "to": "/assets/optimized/vemus设计系统.webp",
+      "sourceBytes": 264529,
+      "outputBytes": 25962,
+      "sourceWidth": 2510,
+      "outputWidth": 1280
+    },
+    {
+      "from": "/assets/imgs/vemus移动端截图.png",
+      "to": "/assets/optimized/vemus移动端截图.webp",
+      "sourceBytes": 464086,
+      "outputBytes": 56410,
+      "sourceWidth": 800,
+      "outputWidth": 800
+    },
+    {
+      "from": "/assets/profile/avatar.png",
+      "to": "/assets/optimized/avatar.webp",
+      "sourceBytes": 321374,
+      "outputBytes": 12382,
+      "sourceWidth": 566,
+      "outputWidth": 520
+    }
+  ]
+}
