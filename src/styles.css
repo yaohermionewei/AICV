@@ -3175,6 +3175,21 @@ blockquote {
   .app-shell:not(.is-pdf-mode) .slide-finale .finale-title {
     max-width: 100%;
   }
+
+  .app-shell:not(.is-pdf-mode)
+    .slide-reflection:has(.reflection-layout.is-quoted-reflection) {
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: calc(100vh - 188px);
+    min-height: calc(100svh - 188px);
+  }
+
+  .app-shell:not(.is-pdf-mode)
+    .slide-reflection:has(.reflection-layout.is-quoted-reflection)
+    .reflection-layout.is-quoted-reflection {
+    height: 100%;
+    min-height: 0;
+    align-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
