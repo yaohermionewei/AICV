@@ -2937,10 +2937,6 @@ blockquote {
     transform: none;
   }
 
-  .app-shell:has(.slide-project.has-title-break) {
-    padding-bottom: 82px;
-  }
-
   .slide-project.has-title-break {
     gap: 18px;
     padding: 20px 18px 18px;
@@ -3114,6 +3110,80 @@ blockquote {
 
   .deck-controls {
     bottom: calc(18px + env(safe-area-inset-bottom));
+  }
+
+  .app-shell:not(.is-pdf-mode) {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 76px 14px calc(92px + env(safe-area-inset-bottom));
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide-stage {
+    min-height: calc(100vh - 188px);
+    min-height: calc(100svh - 188px);
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide {
+    min-height: inherit;
+  }
+
+  .app-shell:not(.is-pdf-mode) .deck-controls {
+    right: clamp(18px, 5vw, 32px);
+    left: clamp(18px, 5vw, 32px);
+    max-width: none;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .app-shell:not(.is-pdf-mode) .deck-controls .icon-button {
+    width: 48px;
+    height: 48px;
+    pointer-events: auto;
+  }
+
+  .app-shell:not(.is-pdf-mode) .deck-controls .progress-track {
+    display: none;
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide-project.has-title-break h1.project-title-break {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.06em;
+    max-width: 100%;
+    font-size: clamp(27px, 8vw, 34px);
+    line-height: 1.06;
+    white-space: normal;
+    text-wrap: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide-project.has-title-break h1.project-title-break span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    hyphens: manual;
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide-finale {
+    grid-template-rows: 1fr;
+    min-height: inherit;
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide-finale .finale-layout {
+    display: grid;
+    min-height: 100%;
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .app-shell:not(.is-pdf-mode) .slide-finale .finale-title {
+    max-width: 100%;
   }
 }
 
