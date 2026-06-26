@@ -2937,6 +2937,49 @@ blockquote {
     transform: none;
   }
 
+  .app-shell:has(.slide-project.has-title-break) {
+    padding-bottom: 82px;
+  }
+
+  .slide-project.has-title-break {
+    gap: 18px;
+    padding: 20px 18px 18px;
+  }
+
+  .slide-project.has-title-break .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .slide-project.has-title-break h1.project-title-break {
+    gap: 0.06em;
+    font-size: clamp(32px, 8.6vw, 35px);
+    line-height: 1.06;
+    text-wrap: nowrap;
+    overflow-wrap: normal;
+  }
+
+  .slide-project.has-title-break h1.project-title-break span {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: keep-all;
+  }
+
+  .slide-project.has-title-break .project-layout.has-shot {
+    gap: 16px;
+  }
+
+  .slide-project.has-title-break .project-copy {
+    gap: 14px;
+  }
+
+  .slide-project.has-title-break .project-layout.has-shot .stats-grid {
+    gap: 8px;
+  }
+
+  .slide-project.has-title-break .project-layout.has-shot .stat-card {
+    padding: 12px;
+  }
+
   .project-shot,
   .project-shot.is-web,
   .project-shot.is-mobile {
@@ -2964,6 +3007,14 @@ blockquote {
 
   .project-shot.is-mobile img {
     max-height: min(52vh, 460px);
+  }
+
+  .slide-project.has-title-break .project-shot.is-web img {
+    max-height: min(38vh, 320px);
+  }
+
+  .slide-project.has-title-break .project-shot.is-mobile img {
+    max-height: min(46vh, 390px);
   }
 
   .project-card {
