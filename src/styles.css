@@ -3112,23 +3112,20 @@ blockquote {
   }
 
   .app-shell {
-    display: flex;
-    min-height: 100vh;
-    min-height: 100svh;
-    flex-direction: column;
-    gap: clamp(18px, 5vw, 28px);
-    padding: 76px 14px calc(22px + env(safe-area-inset-bottom));
+    display: block;
+    min-height: auto;
+    padding: 76px 14px calc(84px + env(safe-area-inset-bottom));
   }
 
   .app-shell .deck-controls {
-    position: static;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    width: 100%;
+    position: fixed;
+    right: clamp(16px, 5vw, 24px);
+    bottom: calc(18px + env(safe-area-inset-bottom));
+    left: clamp(16px, 5vw, 24px);
+    width: auto;
     max-width: none;
-    margin-top: auto;
-    padding: 0 clamp(4px, 1.2vw, 8px);
+    margin-top: 0;
+    padding: 0;
     justify-content: space-between;
     pointer-events: none;
     transform: none;
