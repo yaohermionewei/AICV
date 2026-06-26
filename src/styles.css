@@ -2774,6 +2774,296 @@ blockquote {
   .page-counter {
     display: none;
   }
+
+  html,
+  body,
+  #root {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  :root {
+    --slide-title-size: clamp(31px, 9.4vw, 44px);
+  }
+
+  .app-shell {
+    width: 100%;
+    padding: 76px 14px 112px;
+    overflow-x: hidden;
+  }
+
+  .slide-stage {
+    min-height: 0;
+  }
+
+  .slide {
+    height: auto;
+    min-height: 0;
+    max-width: 100%;
+    padding: 22px;
+  }
+
+  h1,
+  .slide-hero h1.hero-title,
+  .closing-title,
+  .slide-reflection h1.reflection-title,
+  .slide-proof h1.proof-title,
+  .slide-project h1.project-title-break,
+  .slide-project-map h1,
+  .slide-proof h1,
+  .slide-reflection h1,
+  .slide-showcase h1,
+  .slide-influence h1 {
+    max-width: 100%;
+    white-space: normal;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  .slide-hero h1.hero-title {
+    display: grid;
+    align-items: start;
+    gap: 0.08em;
+  }
+
+  .closing-title span,
+  .reflection-title span,
+  .proof-title span,
+  .project-title-break span {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .slide-proof h1.proof-title,
+  .slide-project h1.project-title-break,
+  .slide-reflection h1.reflection-title {
+    line-height: 1.05;
+  }
+
+  .lead,
+  .header-lead,
+  .kicker,
+  .project-layout.has-shot .kicker,
+  .bullet-list li,
+  .is-quoted-reflection .bullet-list li,
+  .is-quoted-reflection .bullet-list li:first-child,
+  .stat-card strong,
+  .stat-card span,
+  .project-layout.has-shot .stat-card strong,
+  .project-layout.has-shot .stat-card span,
+  .project-card h2,
+  .project-card-meta,
+  .project-card-metric,
+  .media-card strong,
+  .media-card span {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .timeline-layout {
+    height: auto;
+    justify-content: start;
+    gap: 20px;
+  }
+
+  .timeline-track {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .timeline-node {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 9px 12px;
+    padding-top: 0;
+  }
+
+  .timeline-node::before {
+    top: 16px;
+    bottom: -14px;
+    left: 7px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .timeline-node:last-child::before {
+    display: none;
+  }
+
+  .timeline-dot {
+    position: relative;
+    top: 4px;
+    left: auto;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-period,
+  .timeline-card {
+    grid-column: 2;
+  }
+
+  .timeline-card {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .timeline-card h2,
+  .timeline-card p {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .project-layout,
+  .project-layout.has-shot,
+  .proof-layout,
+  .reflection-layout,
+  .showcase-layout,
+  .influence-layout,
+  .content-grid,
+  .project-map-layout {
+    gap: 22px;
+  }
+
+  .project-layout.has-shot {
+    align-items: start;
+  }
+
+  .project-layout.has-shot .project-copy > :not(.link-list):not(.plain-link-list) {
+    transform: none;
+  }
+
+  .project-shot,
+  .project-shot.is-web,
+  .project-shot.is-mobile {
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: none;
+    margin-top: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+
+  .project-shot img,
+  .project-shot.is-web img,
+  .project-shot.is-mobile img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: min(58vh, 520px);
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .project-shot.is-mobile img {
+    max-height: min(52vh, 460px);
+  }
+
+  .project-card {
+    min-height: 150px;
+    overflow: visible;
+    padding: 18px;
+  }
+
+  .project-card-foot {
+    margin-top: 12px;
+  }
+
+  .media-grid,
+  .media-grid.is-small,
+  .slide-proof .media-grid,
+  .slide-proof .media-grid:has(.media-card:nth-child(2):last-child),
+  .slide-proof .media-grid:has(.media-card:nth-child(3)),
+  .slide-showcase .media-grid.has-inline-links,
+  .slide-showcase .showcase-media-stack .media-grid.has-inline-links {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    align-content: start;
+    align-items: stretch;
+    justify-items: stretch;
+    height: auto;
+  }
+
+  .media-card,
+  .slide-proof .media-card,
+  .slide-proof .media-grid:has(.media-card:nth-child(2):last-child) .media-card,
+  .slide-proof .media-grid:has(.media-card:nth-child(3)) .media-card,
+  .slide-showcase .media-grid.has-inline-links .media-card {
+    width: 100%;
+    grid-row: auto;
+    grid-template-rows: auto auto;
+  }
+
+  .media-placeholder,
+  .media-grid.is-small .media-placeholder,
+  .slide-proof .media-placeholder,
+  .slide-proof .media-card:first-child .media-placeholder,
+  .slide-proof .media-card:nth-child(n + 2) .media-placeholder,
+  .slide-proof
+    .media-grid:has(.media-card:nth-child(2):last-child)
+    .media-card
+    .media-placeholder,
+  .slide-proof .media-grid:has(.media-card:nth-child(3)) .media-placeholder,
+  .slide-showcase .media-grid.has-inline-links .media-placeholder {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .slide-showcase .media-grid.has-inline-links .media-placeholder {
+    aspect-ratio: 4 / 5;
+  }
+
+  .slide-proof .media-placeholder img,
+  .slide-proof
+    .media-grid:has(.media-card:nth-child(2):last-child)
+    .media-card
+    .media-placeholder
+    img,
+  .slide-proof .media-grid:has(.media-card:nth-child(3)) .media-placeholder img,
+  .slide-showcase .media-grid.has-inline-links .media-placeholder img {
+    position: static;
+    inset: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+  }
+
+  .slide-proof .media-placeholder img {
+    background: #070807;
+  }
+
+  .media-card figcaption,
+  .slide-proof .media-card figcaption,
+  .slide-showcase .media-grid.has-inline-links .media-card figcaption {
+    min-height: 0;
+    padding: 14px;
+    background: var(--surface-soft);
+  }
+
+  .media-card strong,
+  .slide-proof .media-card strong,
+  .slide-showcase .media-grid.has-inline-links .media-card strong {
+    font-size: clamp(17px, 4.8vw, 22px);
+    text-align: left;
+  }
+
+  .media-card span,
+  .slide-proof .media-card span {
+    font-size: clamp(13px, 3.7vw, 16px);
+  }
+
+  .deck-controls {
+    bottom: calc(18px + env(safe-area-inset-bottom));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
