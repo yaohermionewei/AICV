@@ -279,7 +279,7 @@ export const slides: Slide[] = [
   {
     kind: "proof",
     eyebrow: "PROJECT 01 · PROOF",
-    title: "社媒数据验证：用户录屏分享、晒战报",
+    title: "社媒数据验证：玩家分享、晒战报",
     media: [
       {
         label: "单篇热度 10w+",
