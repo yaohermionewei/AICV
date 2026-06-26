@@ -356,7 +356,7 @@ function ProjectMapSlide({ slide, goTo }: { slide: Slide; goTo: (index: number) 
   const projectTargets: Record<string, string> = {
     爆锤解压音游: "爆锤解压音游",
     角色卡点播放器: "角色卡点播放器",
-    "Vemus未音·Web端": "Vemus 未音 · Web 端",
+    "Vemus未音·Web端": "音乐Agent工具设计\nVemus未音 · Web端",
     "Vemus未音·移动端": "音乐Agent工具设计\nVemus未音 · 移动端",
   };
 

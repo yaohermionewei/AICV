@@ -3113,18 +3113,7 @@ blockquote {
   }
 
   .app-shell:not(.is-pdf-mode) {
-    min-height: 100vh;
-    min-height: 100svh;
     padding: 76px 14px calc(92px + env(safe-area-inset-bottom));
-  }
-
-  .app-shell:not(.is-pdf-mode) .slide-stage {
-    min-height: calc(100vh - 188px);
-    min-height: calc(100svh - 188px);
-  }
-
-  .app-shell:not(.is-pdf-mode) .slide {
-    min-height: inherit;
   }
 
   .app-shell:not(.is-pdf-mode) .deck-controls {
@@ -3169,7 +3158,8 @@ blockquote {
 
   .app-shell:not(.is-pdf-mode) .slide-finale {
     grid-template-rows: 1fr;
-    min-height: inherit;
+    min-height: calc(100vh - 188px);
+    min-height: calc(100svh - 188px);
   }
 
   .app-shell:not(.is-pdf-mode) .slide-finale .finale-layout {
