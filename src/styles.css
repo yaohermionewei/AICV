@@ -1415,6 +1415,15 @@ h1 {
     height: auto;
   }
 
+  .influence-card:has(.influence-shot:nth-child(3)) .influence-shots {
+    height: auto;
+    grid-auto-rows: auto;
+  }
+
+  .influence-card:has(.influence-shot:nth-child(3)) .influence-shot {
+    aspect-ratio: 16 / 10;
+  }
+
   .influence-read-link {
     right: 10px;
     bottom: 10px;
@@ -2980,7 +2989,7 @@ blockquote {
   .project-shot.is-web,
   .project-shot.is-mobile {
     align-self: stretch;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100%;
     max-height: none;
@@ -2998,7 +3007,7 @@ blockquote {
     max-height: min(58vh, 520px);
     margin: 0;
     object-fit: contain;
-    object-position: center;
+    object-position: bottom center;
   }
 
   .project-shot.is-mobile img {
@@ -3064,7 +3073,7 @@ blockquote {
   }
 
   .slide-showcase .media-grid.has-inline-links .media-placeholder {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
   }
 
   .slide-proof .media-placeholder img,
