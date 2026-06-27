@@ -172,6 +172,8 @@ function SlideView({
     "slide",
     `slide-${slide.kind}`,
     slide.kind === "project" && slide.title.includes("\n") ? "has-title-break" : "",
+    slide.kind === "project" && (slide.image || slide.imagePlaceholder) ? "has-project-shot" : "",
+    slide.kind === "project" && slide.imageLayout ? `shot-layout-${slide.imageLayout}` : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -545,40 +547,70 @@ function InfluenceSlide({ slide }: { slide: Slide }) {
 
   return (
     <div className="influence-grid" style={{ gridTemplateColumns: columns }}>
-      {items.map((item) => (
-        <article className="influence-card" key={item.title}>
-          <div className="influence-card-head">
-            <span className="influence-badge">{item.badge}</span>
-            <p className="influence-card-title">
-              {item.title}
-              {item.desc ? (
-                <>
-                  <br />
-                  {item.desc}
-                </>
-              ) : null}
-            </p>
-          </div>
-          <div
-            className="influence-shots"
-            style={{ gridTemplateColumns: `repeat(${item.images.length}, minmax(0, 1fr))` }}
-          >
-            {item.images.map((src, i) => (
-              <InfluenceShot
-                key={src}
-                src={src}
-                alt={`${item.badge} ${i + 1}`}
-                link={item.link}
-              />
-            ))}
-          </div>
-        </article>
-      ))}
+      {items.map((item) => {
+        const shotCount = item.images.length;
+        const hasMultipleShots = shotCount > 1;
+        const itemClassName = [
+          "influence-card",
+          hasMultipleShots ? "has-multiple-shots" : "",
+          `shot-count-${shotCount}`,
+        ]
+          .filter(Boolean)
+          .join(" ");
+        const shotsClassName = [
+          "influence-shots",
+          hasMultipleShots ? "has-multiple-shots" : "",
+          `shot-count-${shotCount}`,
+        ]
+          .filter(Boolean)
+          .join(" ");
+
+        return (
+          <article className={itemClassName} key={item.title}>
+            <div className="influence-card-head">
+              <span className="influence-badge">{item.badge}</span>
+              <p className="influence-card-title">
+                {item.title}
+                {item.desc ? (
+                  <>
+                    <br />
+                    {item.desc}
+                  </>
+                ) : null}
+              </p>
+            </div>
+            <div
+              className={shotsClassName}
+              style={{ gridTemplateColumns: `repeat(${shotCount}, minmax(0, 1fr))` }}
+            >
+              {item.images.map((src, i) => (
+                <InfluenceShot
+                  key={src}
+                  src={src}
+                  alt={`${item.badge} ${i + 1}`}
+                  link={item.link}
+                  eager={hasMultipleShots}
+                />
+              ))}
+            </div>
+          </article>
+        );
+      })}
     </div>
   );
 }
 
-function InfluenceShot({ src, alt, link }: { src: string; alt: string; link?: LinkItem }) {
+function InfluenceShot({
+  src,
+  alt,
+  link,
+  eager = false,
+}: {
+  src: string;
+  alt: string;
+  link?: LinkItem;
+  eager?: boolean;
+}) {
   const [failed, setFailed] = useState(false);
 
   return (
@@ -587,7 +619,7 @@ function InfluenceShot({ src, alt, link }: { src: string; alt: string; link?: Li
         <ImageIcon size={30} aria-hidden="true" />
       ) : (
         <>
-          <OptimizedImage src={src} alt={alt} onError={() => setFailed(true)} />
+          <OptimizedImage src={src} alt={alt} eager={eager} onError={() => setFailed(true)} />
           {link ? (
             <a
               className="influence-read-link"

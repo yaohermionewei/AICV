@@ -166,7 +166,7 @@ export const slides: Slide[] = [
     title: "影响力：AI课程，分享可复用经验",
     influenceItems: [
       {
-        badge: "邀请嘉宾",
+        badge: "特邀嘉宾",
         title: "TME 2026 产品设计黑客松",
         desc: "受邀分享 Vibe Coding 经验",
         images: ["/assets/optimized/设计周分享嘉宾.webp"],
